@@ -1,0 +1,12 @@
+/*external/
+!/*external/*.mk
+/**/tmp/
+/**/bin/
+/**/lib/
+/**/out/
+/**/*build*/
+/**/.idea/
+compile_commands.json
+*.txt
+!/test/*.txt
+*.info
