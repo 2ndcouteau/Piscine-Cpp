@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class_model.hpp                                    :+:      :+:    :+:   */
+/*   enemy.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qrosa <qrosa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/08 15:22:39 by qrosa             #+#    #+#             */
-/*   Updated: 2019/01/08 15:23:00 by qrosa            ###   ########.fr       */
+/*   Created: 2019/01/13 10:03:44 by qrosa             #+#    #+#             */
+/*   Updated: 2019/01/13 19:05:57 by qrosa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NAME_CLASS_HPP
-# define NAME_CLASS_HPP
+#ifndef ENEMY_CLASS_HPP
+# define ENEMY_CLASS_HPP
 
-#include <iostream>
+#include "collide.h"
+#include "move.h"
+#include "spawn.h"
+#include "render.h"
 
-class NAME
-{
+class Enemy : public Game::Entity,
+	public Collide, public Move, public Spawn, public Render {
+public:
+	Enemy(int x, int y, size_t hp);
 
-	public:
-		NAME(void);
-		~NAME(void);
+	Enemy();
+	Enemy(Enemy const &src);
+	~Enemy();
 
+	Enemy &operator=(Enemy const &);
+
+	void spawn(Game &game);
+	void render(Game &game);
 };
 
 #endif

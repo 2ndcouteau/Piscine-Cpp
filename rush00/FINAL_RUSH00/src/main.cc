@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class_model.cpp                                    :+:      :+:    :+:   */
+/*   nm.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qrosa <qrosa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: alucas- <alucas-@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/08 15:22:00 by qrosa             #+#    #+#             */
-/*   Updated: 2019/01/08 15:22:17 by qrosa            ###   ########.fr       */
+/*   Created: 1970/01/01 00:00:42 by alucas-           #+#    #+#             */
+/*   Updated: 1970/01/01 00:00:42 by alucas-          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "NAME.hpp"
+#include "game.h"
 
+#include <iostream>
 
-NAME::NAME(void)
+int main()
 {
-	std::cout << " CONS " << std::endl;
-	return;
-}
+	Game game = Game();
 
-NAME::~NAME(void)
-{
-	std::cout << " DES " << std::endl;
-	return;
+	return game.run();
 }
